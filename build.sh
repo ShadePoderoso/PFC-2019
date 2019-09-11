@@ -129,14 +129,8 @@ installIfMissing uuid-dev
 installIfMissing libjansson-dev
 installIfMissing libxml2-dev
 # zmq
-installIfMissing libzmq3-dev
 installIfMissing libzmq5
 installIfMissing python-zmq
-if [ "$MANUFACTURER" == "Ettus" ]; then
-	installIfMissing libuhd-dev
-	installIfMissing libuhd003
-	installIfMissing uhd-host
-fi
 echo "# - done"
 echo
 
