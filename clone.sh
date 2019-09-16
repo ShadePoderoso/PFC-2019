@@ -34,5 +34,11 @@ do
 		cd ..
 		echo
 	fi
+	
+	echo "# cloning libuhd"
+	sayAndDo git clone https://github.com/EttusResearch/uhd.git
+	cd uhd
+	sayAndDo git checkout release_003_010_003_000
+	cd ..
 done
 
