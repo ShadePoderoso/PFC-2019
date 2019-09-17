@@ -23,7 +23,7 @@ for component in $REPOS
 do
 	if [ ! -d $component ]; then
 		echo "# cloning $component"
-		sayAndDo git clone https://github.com/RangeNetworks/$component.git
+		sayAndDo git clone https://github.com/ShadePoderoso/$component.git
 		cd $component
 		for remote in `git branch -r | grep -v master `
 		do
