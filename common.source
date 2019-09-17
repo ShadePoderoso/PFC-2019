@@ -36,4 +36,5 @@ REPOS="\
 	smqueue \
 	subscriberRegistry \
 	system-config \
+	uhd \
 	"
