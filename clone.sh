@@ -34,11 +34,10 @@ do
 		cd ..
 		echo
 	fi
-	
-	echo "# cloning uhd"
-	git clone https://github.com/shadepoderoso/uhd.git
-	cd uhd
-	git checkout desenvolvimento
-	echo
 done
+echo "# cloning uhd"
+git clone https://github.com/shadepoderoso/uhd.git
+cd uhd
+git checkout desenvolvimento
+echo
 
