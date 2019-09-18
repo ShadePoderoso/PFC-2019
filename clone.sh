@@ -38,6 +38,6 @@ done
 echo "# cloning uhd"
 git clone https://github.com/shadepoderoso/uhd.git
 cd uhd
-git checkout desenvolvimento
+git checkout release_003_010_003_000
 echo
 
