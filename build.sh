@@ -120,6 +120,12 @@ installIfMissing cdbs
 installIfMissing libsqlite0-dev
 # asterisk deps
 installIfMissing unixodbc
+installIfMissing libboost-all-dev 
+installIfMissing python-mako
+installIfMissing doxygen
+installIfMissing python-docutils
+installIfMissing cmake
+installIfMissing build-essential
 installIfMissing unixodbc-dev
 installIfMissing libssl-dev
 installIfMissing libsrtp0
@@ -137,6 +143,18 @@ echo
 BUILDNAME="BUILDS/`date +"%Y-%m-%d--%H-%M-%S"`"
 echo "# make a home for this build"
 sayAndDo mkdir -p $BUILDNAME
+
+echo "# construindo o libuhd"
+cd uhd/host
+mkdir BUILD
+cd BUILD
+cmake ../
+make
+make install
+ldconfig
+cd ../../..
+echo "# feito"
+echo
 
 if [ "$COMPONENT" == "all" ] || [ "$COMPONENT" == "libcoredumper" ]; then
 	echo "# libcoredumper - building Debian package and installing as dependency"
