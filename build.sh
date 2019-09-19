@@ -129,7 +129,7 @@ installIfMissing uuid-dev
 installIfMissing libjansson-dev
 installIfMissing libxml2-dev
 # zmq
-installIfMissing libzmq5
+installIfMissing libzmq3-dev
 installIfMissing python-zmq
 echo "# - done"
 echo
